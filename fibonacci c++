@@ -1,0 +1,24 @@
+//C++
+#include <iostream>
+
+int fibonacci(int n) {
+    int i = 0;
+    int fib1 = 0;
+    int fib2 = 1;
+    int suma = 0;
+    while(i<=n) {
+        suma = fib1 + fib2;
+        fib1 = fib2;
+        fib2 = suma;
+        i = i + 1;
+    }
+    return suma;
+}
+
+int main() {
+    int n = 0;
+    std::cout << "Ingrese un numero n: " << std::endl;
+    std::cin >> n;
+    std::cout << "El n-esimo numero de fibonacci es: " << fibonacci(n) << std::endl;
+    return 0;
+}
